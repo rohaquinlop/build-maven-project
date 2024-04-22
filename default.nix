@@ -1,13 +1,9 @@
 {nixpkgs ? import <nixpkgs> {}}:
 with nixpkgs; let
   dependencies = [
-    git
-    jdk21
-    temurin-jre-bin-21
+    jdk11
     maven
     coreutils
-    bash
-    gnugrep
   ];
 
   wrapper = writeShellScriptBin "bld-mvn-prjct" ''
