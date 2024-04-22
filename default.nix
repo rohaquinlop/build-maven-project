@@ -13,7 +13,7 @@ with nixpkgs; let
 
     export PATH="${lib.makeBinPath dependencies}"
 
-    mvn clean package cargo:install
+    mvn compile
   '';
 in
   stdenv.mkDerivation {
